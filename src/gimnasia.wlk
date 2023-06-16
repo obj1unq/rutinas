@@ -1,1 +1,1 @@
-class Abc {}
+class ABC {}
