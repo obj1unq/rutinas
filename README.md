@@ -34,7 +34,7 @@ con la siguiente fórmula:
 - Al practicarse por 5 minutos quemará `100 * (5 -2) * 1.2 = 360`
 - Al practicarse por 90 minutos quemará `100 * (90-5) * 1.2 = 10200`
 
-## Maratón
+### Maratón
 Es un tipo especial de Running con la siguiente diferencia:
 
 - Las calorías que gasta siempre es el doble de una rutina de running común
@@ -60,7 +60,7 @@ Es un tipo especial de Remo con las siguientes diferencias:
 - El descanso son 3 minutos menos de lo que se descansa en una rutina de remo normal. Pero
 ojo, si ese valor es menor a 2, entonces es 2 (Tip: usar el método max de los números)
 
-**Ejemplo:** **remar en el camino de los remeroes** es una actividad de remo de competición 
+**Ejemplo:** **remar en el camino de los remeros** es una actividad de remo de competición 
 - Al practicarse por 5 minutos quemará `100 * (5 - 2) * 1.7 = 510`
 - Al practicarse por 90 minutos quemará `100 * (90 - ((90/5) - 3) ) * 1.7 = 12750`
 
@@ -99,8 +99,7 @@ para cada tipo de persona:
  
  Calamardo es una persona sedentaria de peso 60 y usa 5 minutos por rutina
  
- 
- Al practicar las rutinas del punto anterior peso final es:
+ Al practicar las rutinas del punto anterior el peso final es:
 
   - Correr en la playa: `60 - (360/7000) = 59.948 ` 
   - Correr la Maraton de BA: `60 - (900/7000) = 59.871` 
@@ -140,7 +139,7 @@ Al practicar las rutinas del punto anterior peso final es:
   - Remar en el camino de los remeros: `40 - ((12750/8000) - 1) = 39.406`
 *Nota:* Todos los resultados estan truncados a 3 decimales. usar `miNumero.truncate(3)` en los tests 
 
-## Clubes
+## 3. Clubes
 
 Un **club** tiene varios predios
 De un **predio** se conoce las rutinas que se pueden practicar
