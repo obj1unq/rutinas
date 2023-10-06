@@ -145,11 +145,11 @@ Un **club** tiene varios predios
 De un **predio** se conoce las rutinas que se pueden practicar
 Se pide:
 
-- El mejor predio de un club para una persona: Es la sucursal que más calorías le 
-haría quemar a esa persona si ésta practicara todas las rutinas una vez
+- El mejor predio de un club para una persona: Es el predio que más calorías le 
+haría quemar a esa persona si ésta practicara todas las rutinas una vez.
 
 - Los predios tranquis de un club  para una persona: Es el conjunto de predios que tienen al menos
-una rutina que le hace perder menos de 500 calorias a la persona
+una rutina que le hace gastar menos de 500 calorias a la persona
 
 - Las rutinas más exigentes del club para una persona: Es el conjunto
 formado por la rutina más exigente de cada predio para esa persona. La rutina más 
@@ -161,7 +161,6 @@ El **club barrial** tiene dos predios. El **náutico**, desde dónde
 se puede remar en el delta y en el camino de los remeros, y 
 el **recreo**, dónde se puede correr por la playa y correr la maratón
 de buenos aires.
-
 
 - El mejor predio del club barrial para bob es el **recreo**. Ya que le
 hace gastar 35700 mientras que náutico le hace gastar 22110
