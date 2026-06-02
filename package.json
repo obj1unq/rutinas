@@ -1,7 +1,8 @@
 {
-  "name": "aparatos",
-  "version": "1.0.0",
-  "wollokVersion": "3.0.0",
-  "author": "leo",
-  "license": "ISC"
-}
+    "name": "rutinas",
+    "version": "1.0.0",
+    "wollokVersion": "4.2.3",
+    "author": "leo",
+    "license": "ISC"
+  }
+  
