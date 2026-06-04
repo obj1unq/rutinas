@@ -1,52 +1,44 @@
 # Rutinas deportivas
 
-Este es un sistema que busca calcular como las rutinas de ejercicios
-impactan en el peso de las personas.
+Este es un sistema que busca calcular cómo las rutinas de ejercicios impactan en el peso de las personas.
 
 
 ## 1. Rutinas
 
 
-**Requerimiento** De una rutina se espera poder calcular cuantas calorías quema durante el 
-tiempo que se practique.
+**Requerimiento** Se espera que una rutina permita calcular cuántas calorías se queman durante el tiempo que se la practique.
 
+En este sistema se contemplan 4 tipos de rutina: Running, Maratón, Remo y Remo de competición.
 
-En este sistema se contemplan 4 tipos de rutina: Running, Maratón, Remo y Remo
-de competición.
+Independientemente de cuál es la rutina, el cálculo para saber cuántas calorías consume una rutina siempre depende del tiempo y de la intensidad con que se practique, siguiendo la fórmula:
 
-Independiente de cual es la rutina, siempre la fórmula para saber cuántas
-calorías baja una rutina depende del tiempo que se practique  y una intensidad
-con la siguiente fórmula:
-
-- `100 * (tiempo - descanso) * intensidad`
-
-- El tiempo es algo que siempre se le dice a la rutina al momento de consultar cuantas calorías quema
-
-- El descanso y la intensidad dependerá del caso según se detalla:
+- `calorias-consumidas = 100 * (tiempo - descanso) * intensidad`
+- El tiempo es un dato que se conoce al momento de consultar cuántas calorías se consumen
+- El descanso y la intensidad dependerán del caso según se detalla:
 
 
 ### Running
 
-- La intensidad se establece para cada rutina en especial
-- El descanso es de 5 minutos si el tiempo es mayor a 20, si no 2.
+- La intensidad es un valor configurable
+- Si el tiempo de ejercicio es mayor que 20, entonces el descanso es de 5 minutos; de lo contrario, de 2 minutos.
 
-**Ejemplo:** **correr en la playa** es una actividad de running de intensidad 1.2
-- Al practicarse por 5 minutos quemará `100 * (5 -2) * 1.2 = 360`
-- Al practicarse por 90 minutos quemará `100 * (90-5) * 1.2 = 10200`
+**Ejemplo:** Suponer la actividad *correr en la playa* como una actividad de running de intensidad 1.2
+- Al practicarse por 5 minutos consumirá `100 * (5 -2) * 1.2 = 360`
+- Al practicarse por 90 minutos consumirá `100 * (90-5) * 1.2 = 10200`
 
 ### Maratón
 Es un tipo especial de Running con la siguiente diferencia:
 
-- Las calorías que gasta siempre es el doble de una rutina de running común
+- Siempre consume el doble de calorías que una rutina de running común
 
-**Ejemplo:** *la maraton de ba** es una maraton de intensidad 1.5
-- Al practicarse por 5 minutos quemará `(100 * (5 -2) * 1.5) * 2 = 900`
-- Al practicarse por 90 minutos quemará `(100 * (90-5) * 1.5) * 2 = 25500`
+**Ejemplo:** *la maratón de ba* es una maratón de intensidad 1.5
+- Al practicarse por 5 minutos consumirá `(100 * (5 -2) * 1.5) * 2 = 900`
+- Al practicarse por 90 minutos consumirá `(100 * (90-5) * 1.5) * 2 = 25500`
  
 ### Remo
 
 - La intensidad es siempre 1.3
-- El descanso es tiempo / 5
+- El descanso se calcula como: tiempo / 5
 
 **Ejemplo:** **remar en el delta** es una actividad de remo 
 - Al practicarse por 5 minutos quemará `100 * (5 - (5 /5)) * 1.3 = 520`
@@ -67,29 +59,19 @@ ojo, si ese valor es menor a 2, entonces es 2 (Tip: usar el método max de los n
 
 ## 2. Personas
 
-Las personas hacen distintas rutinas de ejercicios. 
+Las personas siguen distintas rutinas de ejercicio, y el tiempo que dedican a cada una depende del arquetipo de persona que se considere. Además, existen reglas para que la persona pueda hacer una rutina, y no siempre es posible.
 
-El tiempo que ejercitan una rutina depende del tipo de persona en cuestión
+Cuando realizan una rutina, pierden peso dependiendo de la cantidad de calorías que se consumen durante ese tiempo en que la persona la practica y de la cantidad de calorías por kilo, que es un modelo del funcionamiento del organismo de las personas, dependiente del arquetipo mencionado. De manera general, se puede decir que el peso que pierde una persona al hacer una rutina se calcula como: `peso-perdido = calorias-consumidas / calorias-por-kilo `
 
-Cuidado, no siempre pueden hacer una rutina, cada tipo de persona tiene su regla 
-
-Cuando realizan una rutina su peso baja una cantidad de kilos 
-que dependerá de la cantidad de calorías que quema la rutina durante el tiempo 
-en que la persona la practica, y de la cantidad de kilos por caloría que 
-que depende tipo de persona:
-
-Peso que pierde al hacer una rutina: `calorias que baja la rutina en el tiempo que la practica / kilosPorCaloríaQuePierde `
-
-Mientras que la primera parte de la fórmula se resolvió en el punto anterior, la segunda se detalla
-para cada tipo de persona:
+Mientras que `calorias-consumidas` se resolvió en el punto anterior, la segunda se detalla para cada tipo de persona:
 
 **Requerimientos**:
-- Saber cuanto peso perdería una persona al aplicar una rutina
+- Saber cuánto peso perdería una persona al ejercitarse mediante una rutina
 - Que una persona aplique una rutina alterando su peso
  
 ### Personas sedentarias:
 
-- La cantidad de kilosPorCaloría de las personas sedentarias es 7000
+- La cantidad de calorias-por-kilo de las personas sedentarias es 7000
 
 - El tiempo que ejercita una rutina se establece para cada persona sedentaria
 
@@ -121,7 +103,7 @@ un kilo menos que el resto de las personas
 - Formula de peso que se pierde al hacer una rutina: ` (calorias que baja la rutina / kilosPorCaloría) - 1 ` 
 *Nota:* La primera parte es igual que la fórmula para todas las personas
 
-- La cantidad de kilosPorCaloría de las personas atletas es 8000
+- La cantidad de calorias-por-kilo de las personas atletas es 8000
 
 - El tiempo que ejercita una rutina es siempre 90.
 
