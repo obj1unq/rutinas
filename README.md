@@ -161,4 +161,10 @@ son la maratón de buenos aires y remar en el camino de los remeros.
 -para calamardo  las rutinas más exigentes del club barrial
 son la maratón de buenos aires y remar en el delta.
 
+## 4. Reflexión
+1. Indicar un template method en la solución. Dónde está el template y cuales son los métodos hooks. Indicar quienes implementan métodos hooks
+2. Dibujar un diagrama estático que muestre la relación entre clubes, predios y rutinas. Se pide solo incluir los métodos polimórficos y los relacionados con el template method del punto anterior
+
+
+
 
